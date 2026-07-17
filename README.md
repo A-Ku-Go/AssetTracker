@@ -38,7 +38,7 @@ AssetFlow employs a **Layered Architecture Pattern** that strictly isolates conc
 
 ```
 
-✨ Core Engineering Highlights
+## ✨ Core Engineering Highlights
 Dynamic Hierarchical Locations: Implements an adjacency-list model using recursive Common Table Expressions (CTEs) in PostgreSQL to map assets down to deeply nested micro-environments (e.g., Global HQ ➔ Building 3 ➔ Floor 2 ➔ Server Room ➔ Rack B).
 
 Immutable Transactional Auditing: Uses SQLAlchemy lifecycle event listeners to automatically generate cryptographically sound, unalterable event snapshots in an AuditLogs table whenever any asset undergoes modification, transfer, or retirement.
@@ -49,7 +49,7 @@ Server-Side Virtualized Pagination: Employs cursor-based server pagination and q
 
 Granular RBAC Security: Features rigorous role-based routing controls utilizing FastAPI dependencies to decode JWT access tokens from secure HttpOnly cookies, presenting distinct dashboard configurations for Administrators and Employees.
 
-🛠️ Tech Stack & Dependencies
+## 🛠️ Tech Stack & Dependencies
 Backend Tier (Developer A)
 Runtime: Python 3.14.x
 
@@ -78,7 +78,7 @@ Styling Component Engine: Tailwind CSS 4.x.x + shadcn/ui
 
 Form Management: React Hook Form + Zod
 
-📂 Repository Workspace Structure
+## 📂 Repository Workspace Structure
 The project codebases are cleanly decoupled into distinct structural domains within the monorepo to minimize version control conflicts between teammates.
 
 assetflow-monorepo/
@@ -103,7 +103,7 @@ assetflow-monorepo/
     │   └── types/            # Extracted TypeScript server-shape definitions
     └── Dockerfile
 
-⚙️ Local Infrastructure Setup
+## ⚙️ Local Infrastructure Setup
 This monorepo utilizes Docker Compose to guarantee unified, predictable container states across developer machines. Ensure you have Docker Desktop installed.
 
 Clone the repository:
@@ -122,7 +122,7 @@ Frontend Client Interface: http://localhost:5173
 Interactive OpenAPI API Documentation: http://localhost:8000/docs
 Local PostgreSQL Database Instance: localhost:5432
 
-👥 Division of Labor & Team Contributions
+## 👥 Division of Labor & Team Contributions
 AssetFlow was intentionally built as a two-person engineering team to replicate professional collaborative workflows:
 
 [A-Ku-Go / Developer A] — Backend Systems & Database Architecture:
@@ -131,7 +131,7 @@ Responsible for modeling the relational database core, orchestrating the FastAPI
 [KrishnaCreator74 / Developer B] — Frontend Engineering & Client State UX:
 Responsible for designing the single-page web app infrastructure, integrating TanStack Query for background cache synchronization, implementing complex schema form controls via Zod, and building high-fidelity visual monitoring dashboards with Recharts and Tailwind CSS.
 
-🚧 Sprint Roadmap & Current Status
+## 🚧 Sprint Roadmap & Current Status
 [ ] Initial system architecture design and Docker multi-container bootstrapping.
 
 [ ] Asynchronous SQLAlchemy database models and Alembic migration tracking.
