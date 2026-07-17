@@ -81,6 +81,7 @@ Form Management: React Hook Form + Zod
 ## 📂 Repository Workspace Structure
 The project codebases are cleanly decoupled into distinct structural domains within the monorepo to minimize version control conflicts between teammates.
 
+```text
 assetflow-monorepo/
 ├── backend/                  # Developer A Context
 │   ├── app/
@@ -102,6 +103,7 @@ assetflow-monorepo/
     │   ├── pages/            # Page-view modules (Inventory, Audits, Analytics)
     │   └── types/            # Extracted TypeScript server-shape definitions
     └── Dockerfile
+```
 
 ## ⚙️ Local Infrastructure Setup
 This monorepo utilizes Docker Compose to guarantee unified, predictable container states across developer machines. Ensure you have Docker Desktop installed.
