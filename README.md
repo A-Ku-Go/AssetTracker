@@ -1,4 +1,4 @@
-# 📦 AssetFlow: Enterprise Resource & Asset Management Platform
+# 📦 AssetTracker: Enterprise Resource & Asset Management Platform
 
 ![Status](https://img.shields.io/badge/Status-Active_Development-orange)
 ![Python](https://img.shields.io/badge/Python-3.14-blue)
@@ -6,7 +6,7 @@
 ![React](https://img.shields.io/badge/React-19.x-61DAFB)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16.x-336791)
 
-AssetFlow is a production-grade, full-stack B2B asset management platform designed to track high-value physical hardware, manage software licenses, and maintain immutable compliance audit logs across complex, multi-tiered corporate structures. 
+AssetTracker is a production-grade, full-stack B2B asset management platform designed to track high-value physical hardware, manage software licenses, and maintain immutable compliance audit logs across complex, multi-tiered corporate structures. 
 
 Built as a highly decoupled, two-developer collaborative monorepo, the system simulates enterprise engineering constraints by tackling hierarchical data structures, asynchronous compute offloading, database transactional isolation, and performant frontend data virtualization.
 
@@ -14,7 +14,7 @@ Built as a highly decoupled, two-developer collaborative monorepo, the system si
 
 ## 🏛️ System Architecture
 
-AssetFlow employs a **Layered Architecture Pattern** that strictly isolates concerns. The UI layer communicates with the web server via a strongly typed REST contract, while heavy database computations are entirely offloaded to an out-of-band asynchronous worker pool.
+AssetTracker employs a **Layered Architecture Pattern** that strictly isolates concerns. The UI layer communicates with the web server via a strongly typed REST contract, while heavy database computations are entirely offloaded to an out-of-band asynchronous worker pool.
 
 ```text
                   ┌─────────────────────────────────────────┐
@@ -82,7 +82,7 @@ Form Management: React Hook Form + Zod
 The project codebases are cleanly decoupled into distinct structural domains within the monorepo to minimize version control conflicts between teammates.
 
 ```text
-assetflow-monorepo/
+AssetTracker-monorepo/
 ├── backend/                  # Developer A Context
 │   ├── app/
 │   │   ├── api/              # API Route endpoints & HTTP contracts
@@ -109,8 +109,8 @@ assetflow-monorepo/
 This monorepo utilizes Docker Compose to guarantee unified, predictable container states across developer machines. Ensure you have Docker Desktop installed.
 
 Clone the repository:
-git clone [https://github.com/A-Ku-Go/AssetFlow.git](https://github.com/A-Ku-Go/AssetFlow.git)
-cd AssetFlow
+git clone [https://github.com/A-Ku-Go/AssetTracker.git](https://github.com/A-Ku-Go/AssetTracker.git)
+cd AssetTracker
 
 Initialize Environment Variables:
 cp backend/.env.example backend/.env
@@ -125,7 +125,7 @@ Interactive OpenAPI API Documentation: http://localhost:8000/docs
 Local PostgreSQL Database Instance: localhost:5432
 
 ## 👥 Division of Labor & Team Contributions
-AssetFlow was intentionally built as a two-person engineering team to replicate professional collaborative workflows:
+AssetTracker was intentionally built as a two-person engineering team to replicate professional collaborative workflows:
 
 [A-Ku-Go / Developer A] — Backend Systems & Database Architecture:
 Responsible for modeling the relational database core, orchestrating the FastAPI execution loop, writing database triggers/event-hooks for unalterable system logs, establishing JWT token authentication pipelines, and structuring async Celery task queues.
