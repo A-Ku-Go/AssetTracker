@@ -36,6 +36,8 @@ AssetFlow employs a **Layered Architecture Pattern** that strictly isolates conc
   │      Celery + Redis Broker       │     │ PostgreSQL + SQLAlchemy 2.0   │
   └──────────────────────────────────┘     └───────────────────────────────┘
 
+```
+
 ✨ Core Engineering Highlights
 Dynamic Hierarchical Locations: Implements an adjacency-list model using recursive Common Table Expressions (CTEs) in PostgreSQL to map assets down to deeply nested micro-environments (e.g., Global HQ ➔ Building 3 ➔ Floor 2 ➔ Server Room ➔ Rack B).
 
