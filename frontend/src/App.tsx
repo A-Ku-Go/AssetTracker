@@ -1,11 +1,12 @@
 import Background from '@/components/background/Background';
-import Shell from '@/components/layout/Shell';
+import LandingPage from '@/pages/LandingPage';
+
 
 function App() {
   return (
     <>
     <Background />
-    <Shell />
+    <LandingPage />
     </>
     );
 }
