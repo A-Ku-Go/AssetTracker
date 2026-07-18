@@ -1,12 +1,13 @@
-import { Button } from "@/components/ui/button"
+import Background from '@/components/background/Background';
+import Shell from '@/components/layout/Shell';
 
 function App() {
   return (
-    <div>
-      <h1>AssetFlow</h1>
-      <Button>Hello World</Button>
-    </div>
-  );
+    <>
+    <Background />
+    <Shell />
+    </>
+    );
 }
 
 export default App;
