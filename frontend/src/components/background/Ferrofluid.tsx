@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Renderer, Program, Mesh, Triangle } from 'ogl';
+import { motion } from 'motion/react';
 
 export interface FerrofluidProps {
   className?: string;
@@ -391,8 +392,11 @@ const Ferrofluid: React.FC<FerrofluidProps> = ({
   ]);
 
   return (
-    <div
+    <motion.div
       ref={containerRef}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{delay: 2, duration: 5}}
       className={`w-full h-full overflow-hidden relative ${className ?? ''}`}
       style={{
         ...(mixBlendMode && { mixBlendMode: mixBlendMode as React.CSSProperties['mixBlendMode'] })
