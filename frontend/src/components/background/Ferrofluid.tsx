@@ -396,7 +396,7 @@ const Ferrofluid: React.FC<FerrofluidProps> = ({
       ref={containerRef}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{delay: 2, duration: 5}}
+      transition={{delay: 2, duration: 7}}
       className={`w-full h-full overflow-hidden relative ${className ?? ''}`}
       style={{
         ...(mixBlendMode && { mixBlendMode: mixBlendMode as React.CSSProperties['mixBlendMode'] })

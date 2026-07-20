@@ -2,11 +2,14 @@ import BlurText from "@/components/ui/BlurText";
 import {useState} from "react";
 import AnimatedOutlineButton from "@/components/ui/AnimatedOutlineButton";
 import {motion} from "motion/react";
+import {useNavigate} from "react-router-dom";
 
 function LandingPage() {
     const [titleFinished, setTitleFinished] = useState(false);
 
     const [subtitleFinished, setSubtitleFinished] = useState(false);
+
+    const navigate = useNavigate();
 
     const handleTitleAnimationComplete = () => {
         console.log("TITLE FINISHED");
@@ -40,7 +43,7 @@ function LandingPage() {
                         animateBy="words"
                         direction="top"
                         className="text-xl mb-8 font-bold text-white" 
-                        delay={400}
+                        delay={600}
                         onAnimationComplete={handleSubtitleAnimationComplete}
                         start = {true}
                     /> 
@@ -53,7 +56,7 @@ function LandingPage() {
             {
                 subtitleFinished && (
                     <motion.div initial={{ opacity: 0, y: 3 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5, duration: 0.5 }}>
-                        <AnimatedOutlineButton>
+                        <AnimatedOutlineButton onClick={() => navigate("/dashboard")}>
                             Get Started
                         </AnimatedOutlineButton>
                     </motion.div>
