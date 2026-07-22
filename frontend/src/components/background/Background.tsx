@@ -11,10 +11,10 @@ function Background() {
       fluidity={0.1}
       rimWidth={0.2}
       sharpness={2.5}
-      shimmer={1.5}
-      glow={1.0}
+      shimmer={1.0}
+      glow={0.5}
       flowDirection="down"
-      opacity={1}
+      opacity={0.5}
       mouseInteraction
       mouseStrength={1}
       mouseRadius={0.35}
