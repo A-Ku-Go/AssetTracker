@@ -1,13 +1,19 @@
 import Sidebar from "@/components/layout/Sidebar";
+import Header from "@/components/layout/Header";
 
 function DashboardLayout(){
     return (
 
         <div className="flex">
+
             <Sidebar />
-            <main className="h-screen flex-1 p-10">
-                <p>Welcome to your dashboard!</p>
-            </main>
+            <div className="flex flex-1 flex-col p-10">
+                <Header/>
+                <main className="h-screen">
+                    
+                    <h1>Welcome to your dashboard!</h1>
+                </main>
+            </div>
         </div>
 
     );
