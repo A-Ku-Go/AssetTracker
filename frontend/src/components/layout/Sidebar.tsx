@@ -1,5 +1,5 @@
 import SidebarItem from "@/components/layout/SidebarItem";
-import {Home,Settings,Package,User} from "lucide-react"
+import {Home,Settings,Package,User,MapPin,Logs} from "lucide-react";
 
 function Sidebar() {
 
@@ -7,6 +7,9 @@ function Sidebar() {
         { Icon: Home, name: 'Dashboard', href: '/dashboard' },
         { Icon: Package, name: 'Assets', href: '/assets' },
         { Icon: User, name: 'Users', href: '/users' },
+        { Icon: MapPin, name: 'Locations', href: '/locations'},
+        { Icon: Logs, name: 'Audit Logs', href: '/auditLogs'}
+
     ];
 
     return (

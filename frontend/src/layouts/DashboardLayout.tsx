@@ -1,5 +1,7 @@
 import Sidebar from "@/components/layout/Sidebar";
 import Header from "@/components/layout/Header";
+import StatGrid from "@/components/dashboard/StatGrid";
+
 
 function DashboardLayout(){
     return (
@@ -7,11 +9,12 @@ function DashboardLayout(){
         <div className="flex">
 
             <Sidebar />
-            <div className="flex flex-1 flex-col p-10">
+            <div className="flex flex-1 flex-col p-10 gap-10">
                 <Header/>
                 <main className="h-screen">
-                    
-                    <h1>Welcome to your dashboard!</h1>
+
+                    <StatGrid/>
+
                 </main>
             </div>
         </div>
