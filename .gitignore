@@ -210,7 +210,6 @@ tempCodeRunnerFile.py
 .idea/
 .DS_Store
 
-
 # Ruff stuff:
 .ruff_cache/
 
